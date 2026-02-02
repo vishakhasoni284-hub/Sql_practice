@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://sqlzoo.net/wiki/SELECT_names -->
+<html class="client-js" lang="en-GB" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>SELECT names - SQLZoo</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"88c53dfb0363ddf6197aa816","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SELECT_names","wgTitle":"SELECT names","wgCurRevisionId":40201,"wgRevisionId":40201,"wgArticleId":901,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using deprecated source tags","Languages pages","Pages with too many expensive parser function calls"],"wgPageViewLanguage":"en-gb","wgPageContentLanguage":"en-gb","wgPageContentModel":"wikitext","wgRelevantPageName":"SELECT_names","wgRelevantArticleId":901,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,
+"wgRestrictionEdit":[],"wgRestrictionMove":[]};RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","skins.timeless":"ready"};RLPAGEMODULES=["ext.pygments.view","mediawiki.page.media","site","mediawiki.page.ready","skins.timeless.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="./Select-sql_files/load.php">
+<script async="" src="./Select-sql_files/load(1).php"></script>
+<!--[if IE]><link rel="stylesheet" href="/w/skins/Timeless/resources/IE9fixes.css?ffe73" media="screen"><![endif]-->
+<style>
+@media screen {
+	.overflowed{margin:1em 0;position:relative;overflow:hidden}.overflowed .content-table-left,.overflowed .content-table-right{height:100%;position:absolute;bottom:0;z-index:1}.overflowed .content-table-right{ right:0}.mw-content-rtl .overflowed .content-table-right{ left:0; right:unset}.scroll-right.overflowed .content-table-right{box-shadow:0 0 4px 1px rgba(0,0,0,0.25);border-left:solid 1px #c8ccd1}.overflowed .content-table-left{ left:0}.mw-content-rtl .overflowed .content-table-left{ right:0; left:unset}.scroll-left.overflowed .content-table-left{box-shadow:0 0 4px 1px rgba(0,0,0,0.25);border-left:solid 1px #c8ccd1}.overflowed .content-table{overflow:hidden;overflow-x:scroll}.overflowed .content-table > table{margin:0}.overflowed .content-table > table.mw_metadata,.overflowed .content-table > table.mw-datatable,.overflowed .content-table > table.wikitable{border-bottom-width:0}.content-table-scrollbar.inactive{position:absolute;top:-99999px;bottom:unset;left:-99999px}.content-table-scrollbar{position:fixed;bottom:0;overflow-x:scroll;z-index:1}.content-table-spoof{height:1px}}
+.mw-highlight-copy--bound button{position:absolute;top:-1em;right:-0.9em;box-sizing:border-box;padding:5px 7px;border-radius:2px;background:#fff;color:#0645ad;border:1px solid #eee}.mw-highlight-copy--bound button:hover{cursor:pointer;color:#447ff5;background:#f9f9f9;border-color:#447ff5}.mw-highlight-copy--bound button:active{color:#2a4b8d;background:#eee;border-color:#2a4b8d}
+#mw-teleport-target{position:absolute;z-index:450}#mw-teleport-target{font-size:0.95em}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="./Select-sql_files/load(2).php">
+<meta name="generator" content="MediaWiki 1.43.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+<link rel="search" type="application/opensearchdescription+xml" href="https://sqlzoo.net/w/rest.php/v1/search" title="SQLZoo (en-gb)">
+<link rel="EditURI" type="application/rsd+xml" href="https://sqlzoo.net/w/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="SQLZoo Atom feed" href="https://sqlzoo.net/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<script type="text/javascript" src="./Select-sql_files/sqlzoo.js.download" defer=""></script><link rel="stylesheet" href="./Select-sql_files/sqlzoo.css">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-SELECT_names rootpage-SELECT_names skin-timeless action-view skin--responsive mysql-sage"><div id="mw-wrapper"><div id="mw-header-container" class="ts-container"><div id="mw-header" class="ts-inner"><div id="user-tools"><div id="personal"><h2><span>Anonymous</span></h2><div id="personal-inner" class="dropdown"><div role="navigation" class="mw-portlet" id="p-personal" title="User menu" aria-labelledby="p-personal-label"><h3 id="p-personal-label" lang="en-GB" dir="ltr">Not logged in</h3><div class="mw-portlet-body"><ul lang="en-GB" dir="ltr"><li id="pt-login" class="mw-list-item"><a href="https://sqlzoo.net/w/index.php?title=Special:UserLogin&amp;returnto=SELECT+names" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o"><span>Log in</span></a></li></ul></div></div></div></div><div><span></span><select id="engine"><option value="mysql-sage" selected="selected">MySQL sage</option><option value="mysql-tinky">MySQL tinky</option><option value="postgres">PostgreSQL</option><option value="mssql-sage">Microsoft SQL</option><option value="oracle-sage">Oracle</option></select></div></div><div id="p-logo-text" class="mw-portlet" role="banner"><a id="p-banner" class="mw-wiki-title" href="https://sqlzoo.net/wiki/SQL_Tutorial">SQLZoo</a></div><div class="mw-portlet" id="p-search"><h3 lang="en-GB" dir="ltr"><label for="searchInput">Search</label></h3><form action="https://sqlzoo.net/w/index.php" id="searchform"><div id="simpleSearch"><div id="searchInput-container"><input type="search" name="search" placeholder="Search SQLZoo" aria-label="Search SQLZoo" autocapitalize="sentences" title="Search SQLZoo [alt-shift-f]" accesskey="f" id="searchInput"></div><input type="hidden" value="Special:Search" name="title"><input class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" id="mw-searchButton" value="Search"><input class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" id="searchButton" value="Go"></div></form></div><div id="uc-banner" class="banners">    <span><a href="https://www.datawars.io/?utm_source=sqlzoo&amp;utm_medium=top-text"><b><img alt="DataWars, Data Science Practice Projects - Logo" src="./Select-sql_files/icon-transparent-bg.png" style=" width: 35px; margin-right: 5px; ">DataWars: </b></a>Practice Data Science/Analysis with <b>+100 Real Life Projects</b></span></div></div><div class="visualClear"></div></div><div id="mw-header-hack" class="color-bar"><div class="color-middle-container"><div class="color-middle"></div></div><div class="color-left"></div><div class="color-right"></div></div><div id="mw-header-nav-hack"><div class="color-bar"><div class="color-middle-container"><div class="color-middle"></div></div><div class="color-left"></div><div class="color-right"></div></div></div><div id="menus-cover"></div><div id="mw-content-container" class="ts-container"><div id="mw-content-block" class="ts-inner"><div id="mw-content-wrapper"><div id="mw-content"><div id="content" class="mw-body" role="main"><div class="mw-indicators">
+</div>
+<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">SELECT names</span></h1><div id="bodyContentOuter"><div id="siteSub">From SQLZoo</div><div id="mw-page-header-links"><div role="navigation" class="mw-portlet tools-inline" id="p-namespaces" aria-labelledby="p-namespaces-label"><h3 id="p-namespaces-label" lang="en-GB" dir="ltr">Namespaces</h3><div class="mw-portlet-body"><ul lang="en-GB" dir="ltr"><li id="ca-nstab-main" class="selected mw-list-item"><a href="https://sqlzoo.net/wiki/SELECT_names" title="View the content page [alt-shift-c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://sqlzoo.net/w/index.php?title=Talk:SELECT_names&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [alt-shift-t]" accesskey="t"><span>Discussion</span></a></li></ul></div></div><div role="navigation" class="mw-portlet tools-inline" id="p-more" aria-labelledby="p-more-label"><h3 id="p-more-label" lang="en-GB" dir="ltr">More</h3><div class="mw-portlet-body"><ul lang="en-GB" dir="ltr"><li id="ca-more" class="dropdown-toggle mw-list-item"><span>More</span></li></ul></div></div><div role="navigation" class="mw-portlet tools-inline" id="p-views" aria-labelledby="p-views-label"><h3 id="p-views-label" lang="en-GB" dir="ltr">Page actions</h3><div class="mw-portlet-body"><ul lang="en-GB" dir="ltr"><li id="ca-view" class="selected mw-list-item"><a href="https://sqlzoo.net/wiki/SELECT_names"><span>Read</span></a></li><li id="ca-viewsource" class="mw-list-item"><a href="https://sqlzoo.net/w/index.php?title=SELECT_names&amp;action=edit" title="This page is protected.
+You can view its source [alt-shift-e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://sqlzoo.net/w/index.php?title=SELECT_names&amp;action=history" title="Past revisions of this page [alt-shift-h]" accesskey="h"><span>History</span></a></li></ul></div></div></div><div class="visualClear"></div><div id="bodyContent"><div id="contentSub"><div id="mw-content-subtitle"></div></div><div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en-GB" dir="ltr"><div class="content-table-wrapper"><div class="content-table-scrollbar inactive" style="width: 1196.1px;"><div class="content-table-spoof" style="width: 249.975px;"></div></div><div class="content-table-left"></div><div class="content-table-right"></div><div class="content-table"><table class="nmbox" style="border:1px solid #AAA; border-collapse:collapse; clear:both; font-size:85%; margin: 0.5em 0">
+<tbody><tr style="background:#EEF3E2">
+<th class="mbox-image" style="white-space:nowrap; padding:4px 1em; border-right:1px solid #aaa"> <a href="https://sqlzoo.net/wiki/Special:MyLanguage/Project:Language_policy" title="Special:MyLanguage/Project:Language policy">Language:</a><span style="display:none"><a href="https://sqlzoo.net/wiki/SQLZoo:Language_policy" title="SQLZoo:Language policy">Project:Language policy</a></span></th>
+<td class="mbox-text" style="background:#F6F9ED"><b><a class="mw-selflink selflink">English</a></b> &nbsp;• <bdi lang="ja"><a href="https://sqlzoo.net/wiki/SELECT_names/ja" title="SELECT names/ja">日本語</a></bdi><span class="autonym"></span><span class="autonym"></span>&nbsp;• <bdi lang="zh"><a href="https://sqlzoo.net/wiki/SELECT_names/zh" title="SELECT names/zh">中文</a></bdi></td>
+</tr></tbody></table></div></div>
+<div class="ref_section">
+<div class="content-table-wrapper"><div class="content-table-scrollbar inactive" style="width: 1196.1px;"><div class="content-table-spoof" style="width: 173.887px;"></div></div><div class="content-table-left"></div><div class="content-table-right"></div><div class="content-table"><table class="db_ref">
+<tbody><tr><th>name</th><th>continent</th></tr>
+<tr><td>Afghanistan</td><td>Asia</td></tr>
+<tr><td>Albania</td><td>Europe</td></tr>
+<tr><td>Algeria</td><td>Africa</td></tr>
+<tr><td>Andorra</td><td>Europe</td></tr>
+<tr><td>Angola</td><td>Africa</td></tr>
+<tr>
+<td colspan="2">....</td>
+</tr>
+</tbody></table></div></div>
+</div>
+<hr>
+<h2><span class="mw-headline" id="Pattern_Matching_Strings">Pattern Matching Strings</span></h2>
+<p>This  tutorial uses the <b>LIKE</b> operator to check names. We will be using the SELECT command on the table <b>world</b>:</p>
+<div class="extra_space" style="width:1em; height:6em;"></div>
+<div class="qu zood" data-qnumber="1">
+
+
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">1.</span><p>You can use <code>WHERE name LIKE 'B%'</code> to find the countries that start with "B".
+</p><ul><li>The&nbsp;% is a <i>wild-card</i> it can match any characters</li></ul><p class="imper">Find the country that start with Y</p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'F%'</span>
+</pre></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'Y%'</span>
+</pre></div><div name="frm__1" id="frm__1" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_1">SELECT name FROM world
+  WHERE name LIKE 'F%'
+</textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>name</th></tr><tr><td>Yemen</td></tr></table></div></div>
+<p><br>
+</p>
+<div class="qu zood" data-qnumber="2">
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">2.</span><p class="imper">Find the countries that end with <b>y</b></p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'T%'</span>
+</pre></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%y'</span>
+</pre></div><div name="frm__2" id="frm__2" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_2">SELECT name FROM world
+  WHERE name LIKE 'T%'
+</textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>name</th></tr><tr><td>Turkey</td></tr><tr><td>Germany</td></tr><tr><td>Hungary</td></tr><tr><td>Italy</td></tr><tr><td>Norway</td></tr><tr><td>Vatican City</td></tr><tr><td>Paraguay</td></tr><tr><td>Uruguay</td></tr></table></div></div>
+<div class="qu zood" data-qnumber="3">
+
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">3.</span><p>Luxembourg has an <b>x</b> - so does one other country. List them both.
+</p><p class="imper">Find the countries that contain the letter <b>x</b></p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'T%'</span>
+</pre></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%x%'</span>
+</pre></div><div name="frm__3" id="frm__3" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_3">SELECT name FROM world
+  WHERE name LIKE 'T%'
+</textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>name</th></tr><tr><td>Luxembourg</td></tr><tr><td>Mexico</td></tr></table></div></div>
+<div class="qu zood" data-qnumber="4">
+
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">4.</span><p>Iceland, Switzerland end with <b>land</b> - but are there others?
+</p><p class="imper">Find the countries that end with <b>land</b></p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'T%'</span>
+</pre></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%land'</span>
+</pre></div><div name="frm__4" id="frm__4" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_4">SELECT name FROM world
+  WHERE name LIKE 'T%'
+</textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>name</th></tr><tr><td>Swaziland</td></tr><tr><td>Thailand</td></tr><tr><td>Finland</td></tr><tr><td>Iceland</td></tr><tr><td>Ireland</td></tr><tr><td>Poland</td></tr><tr><td>Switzerland</td></tr><tr><td>New Zealand</td></tr></table></div></div>
+<div class="qu zood" data-qnumber="5">
+
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">5.</span><p>Columbia starts with a <b>C</b> and ends with <b>ia</b> - there are two more like this.
+</p><p class="imper">Find the countries that start with <b>C</b> and end with <b>ia</b></p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'T%'</span>
+</pre></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'C%ia'</span>
+</pre></div><div name="frm__5" id="frm__5" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_5">SELECT name FROM world
+  WHERE name LIKE 'T%'
+</textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>name</th></tr><tr><td>Cambodia</td></tr><tr><td>Colombia</td></tr><tr><td>Croatia</td></tr></table></div></div>
+<div class="qu zood" data-qnumber="6">
+
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">6.</span><p>Greece has a double <b>e</b> - who has a double <b>o</b>?
+</p><p class="imper">Find the country that has <b>oo</b> in the name</p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%ee%'</span>
+</pre></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%oo%'</span>
+</pre></div><div name="frm__6" id="frm__6" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_6">SELECT name FROM world
+  WHERE name LIKE '%ee%'
+</textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>name</th></tr><tr><td>Cameroon</td></tr></table></div></div>
+<div class="qu zood" data-qnumber="7">
+
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">7.</span><p>Bahamas has three <b>a</b> - who else?
+</p><p class="imper">Find the countries that have three or more <b>a</b> in the name</p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'T%'</span>
+</pre></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%a%a%a%'</span>
+</pre></div><div name="frm__7" id="frm__7" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_7">SELECT name FROM world
+  WHERE name LIKE 'T%'
+</textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>name</th></tr><tr><td>Central African Republic</td></tr><tr><td>Equatorial Guinea</td></tr><tr><td>Madagascar</td></tr><tr><td>Mauritania</td></tr><tr><td>Sao TomÃ© and PrÃ­ncipe</td></tr><tr><td>Tanzania</td></tr><tr><td>Afghanistan</td></tr><tr><td>Azerbaijan</td></tr><tr><td>Malaysia</td></tr><tr><td>Saudi Arabia</td></tr><tr><td>United Arab Emirates</td></tr><tr><td>Antigua and Barbuda</td></tr><tr><td>Bahamas</td></tr><tr><td>Jamaica</td></tr><tr><td>Trinidad and Tobago</td></tr><tr><td>Albania</td></tr><tr><td>Bosnia and Herzegovina</td></tr><tr><td>Kazakhstan</td></tr><tr><td>Canada</td></tr><tr><td>Guatemala</td></tr><tr><td>Nicaragua</td></tr><tr><td>Panama</td></tr><tr><td>Australia</td></tr><tr><td>Marshall Islands</td></tr><tr><td>Micronesia, Federated States of</td></tr><tr><td>Papua New Guinea</td></tr><tr><td>Paraguay</td></tr><tr><td>Saint Vincent and the Grenadines</td></tr></table></div></div>
+<div class="qu zood" data-qnumber="8">
+
+
+
+
+
+<div><span class="id">8.</span><p>India and Angola have an <b>n</b> as the second character. You can use the underscore as a single character wildcard.
+</p><div class="mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'_n%'</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">name</span>
+</pre></div><p class="imper">Find the countries that have "t" as the second character.</p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'_n%'</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">name</span>
+</pre></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'_t%'</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">name</span>
+</pre></div><div name="frm__8" id="frm__8" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_8">SELECT name FROM world
+ WHERE name LIKE '_n%'
+ORDER BY name
+</textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res">result</div></div>
+<div class="qu zood" data-qnumber="9">
+
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">9.</span><p>Les<b>o</b>th<b>o</b> and M<b>o</b>ld<b>o</b>va both have two o characters separated by two other characters.
+</p><p class="imper">Find the countries that have two "o" characters separated by two others.</p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'_n%'</span>
+</pre></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%o__o%'</span>
+</pre></div><div name="frm__9" id="frm__9" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_9">SELECT name FROM world
+ WHERE name LIKE '_n%'
+</textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>name</th></tr><tr><td>Congo, Democratic Republic of</td></tr><tr><td>Congo, Republic of</td></tr><tr><td>Lesotho</td></tr><tr><td>Morocco</td></tr><tr><td>Sao TomÃ© and PrÃ­ncipe</td></tr><tr><td>Mongolia</td></tr><tr><td>Moldova</td></tr></table></div></div>
+<div class="qu zood" data-qnumber="10">
+
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">10.</span><p>Cuba and Togo have four characters names.
+</p><p class="imper">Find the countries that have exactly four characters.</p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'Cu%'</span>
+</pre></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'____'</span>
+</pre></div><div name="frm__10" id="frm__10" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_10">SELECT name FROM world
+ WHERE name LIKE 'Cu%'
+</textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>name</th></tr><tr><td>Chad</td></tr><tr><td>Mali</td></tr><tr><td>Togo</td></tr><tr><td>Iran</td></tr><tr><td>Iraq</td></tr><tr><td>Laos</td></tr><tr><td>Oman</td></tr><tr><td>Cuba</td></tr><tr><td>Fiji</td></tr><tr><td>Peru</td></tr></table></div></div>
+<p>Play <a rel="nofollow" class="external text" href="https://sqlzoo.net/brain/bt.htm">Find the Duplicates</a>
+</p>
+<figure class="mw-halign-left" typeof="mw:File/Thumb"><a href="https://sqlzoo.net/brain/bt.htm" rel="nofollow"><img resource="/wiki/File:DuplicatesGame.png" src="./Select-sql_files/200px-DuplicatesGame.png" decoding="async" width="200" height="153" class="mw-file-element" srcset="/w/images/thumb/4/45/DuplicatesGame.png/300px-DuplicatesGame.png 1.5x, /w/images/thumb/4/45/DuplicatesGame.png/400px-DuplicatesGame.png 2x"></a><a href="https://sqlzoo.net/wiki/File:DuplicatesGame.png" class="mw-file-magnify"></a><figcaption>Find the Duplicates Game</figcaption></figure>
+<div style="clear: both;"></div>
+<h2><span class="mw-headline" id="Harder_Questions">Harder Questions</span></h2>
+<p>Well done for getting this far.
+</p><p>The next questions are optional and only for students who are finding the basic questions too easy.
+</p>
+<div class="qu zood" data-qnumber="11">
+
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">11.</span><p>The capital of <b>Luxembourg</b> is <b>Luxembourg</b>. Show all the countries where the capital is the same as the name of the country
+</p><p class="imper">Find the country where the name is the capital city.</p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">capital</span><span class="p">,</span><span class="w"> </span><span class="n">continent</span>
+<span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">'%x%'</span>
+</pre></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">world</span>
+<span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">capital</span>
+</pre></div><div name="frm__11" id="frm__11" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_11">SELECT name, capital, continent
+  FROM world
+ WHERE name LIKE '%x%'
+</textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>name</th></tr><tr><td>Djibouti</td></tr><tr><td>Luxembourg</td></tr><tr><td>San Marino</td></tr><tr><td>Singapore</td></tr></table></div></div>
+<div class="qu zood" data-qnumber="12">
+
+
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">12.</span><p>The capital of <b>Mexico</b> is <b>Mexico City</b>. Show all the countries where the capital has the country together with the word "City".
+</p><p class="imper">Find the country where the capital is the country plus "City".</p><div class="tease">The concat function</div><div class="hint hide" title="The concat function">
+<p>The function concat is short for concatenate - you can use it to combine two or more strings.
+</p>
+</div><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre>SELECT name, concat(name, 'town')
+  FROM world
+ WHERE name LIKE '%ina%'</pre></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre>SELECT name FROM world
+ WHERE capital = concat(name, ' City')</pre></div><div name="frm__12" id="frm__12" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_12">SELECT name, concat(name, 'town')
+  FROM world
+ WHERE name LIKE '%ina%'</textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>name</th></tr><tr><td>Guatemala</td></tr><tr><td>Kuwait</td></tr><tr><td>Mexico</td></tr><tr><td>Panama</td></tr></table></div></div>
+<div class="qu zood" data-qnumber="13">
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">13.</span><p class="imper">Find the capital and the name where the capital includes the name of the country.</p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre>SELECT capital, name FROM world
+ WHERE capital LIKE concat('%', name, '%')</pre></div><div name="frm__13" id="frm__13" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_13"></textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>capital</th><th>name</th></tr><tr><td>Andorra la Vella</td><td>Andorra</td></tr><tr><td>Djibouti</td><td>Djibouti</td></tr><tr><td>Guatemala City</td><td>Guatemala</td></tr><tr><td>Kuwait City</td><td>Kuwait</td></tr><tr><td>Luxembourg</td><td>Luxembourg</td></tr><tr><td>Mexico City</td><td>Mexico</td></tr><tr><td>Monaco-Ville</td><td>Monaco</td></tr><tr><td>Panama City</td><td>Panama</td></tr><tr><td>San Marino</td><td>San Marino</td></tr><tr><td>Singapore</td><td>Singapore</td></tr></table></div></div>
+<div class="qu zood" data-qnumber="14">
+
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">14.</span><p class="imper">Find the capital and the name where the capital is an extension of name of the country.</p><p>You <i>should</i> include <b>Mexico City</b> as it is longer than <b>Mexico</b>. You <i>should not</i> include <b>Luxembourg </b> as the capital is the same as the country.
+</p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre>SELECT capital,name FROM world
+ WHERE capital LIKE concat(name, '_%')</pre></div><div name="frm__14" id="frm__14" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_14" data-first-focus="1770056527567"></textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>capital</th><th>name</th></tr><tr><td>Andorra la Vella</td><td>Andorra</td></tr><tr><td>Guatemala City</td><td>Guatemala</td></tr><tr><td>Kuwait City</td><td>Kuwait</td></tr><tr><td>Mexico City</td><td>Mexico</td></tr><tr><td>Monaco-Ville</td><td>Monaco</td></tr><tr><td>Panama City</td><td>Panama</td></tr></table></div></div>
+<div class="qu zood" data-qnumber="15">
+
+
+
+
+
+<div><div class="qcorrect" title="You have answered this question correctly."></div><span class="id">15.</span><p>The capital of Monaco is <b>Monaco-Ville</b>: this is the name <b>Monaco</b> and the extension is <b>-Ville</b>.
+</p><p class="imper">Show the name and the extension where the capital is a proper (non-empty) extension of name of the country.</p><p>You can use the SQL function <a href="https://sqlzoo.net/wiki/REPLACE" title="REPLACE">REPLACE</a>.
+</p><div class="def mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"></div><div class="ans mw-highlight mw-highlight-lang-sql mw-content-ltr" dir="ltr"><pre>select name, replace(capital,name,'')
+from world
+where capital LIKE concat(name,'_%')</pre></div><div name="frm__15" id="frm__15" class="frm"><span class="quf"><textarea spellcheck="false" rows="6" cols="47" class="sql" id="txtar_15" data-first-focus="1770056490936"></textarea><button class="submitSQL">Submit SQL</button><button class="reset">restore default</button></span></div></div><div class="res"><h1>Correct answer</h1><table class="sqlmine"><tr><th>name</th><th>extension</th></tr><tr><td>Andorra</td><td> la Vella</td></tr><tr><td>Guatemala</td><td> City</td></tr><tr><td>Kuwait</td><td> City</td></tr><tr><td>Mexico</td><td> City</td></tr><tr><td>Monaco</td><td>-Ville</td></tr><tr><td>Panama</td><td> City</td></tr></table></div></div>
+<!-- 
+NewPP limit report
+Cached time: 20260131193448
+Cache expiry: 86400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.161 seconds
+Real time usage: 4.476 seconds
+Preprocessor visited node count: 5394/1000000
+Post‐expand include size: 15347/2097152 bytes
+Template argument size: 4663/2097152 bytes
+Highest expansion depth: 18/100
+Expensive parser function count: 105/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 14780/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  128.684      1 Template:Languages
+100.00%  128.684      1 -total
+ 73.67%   94.803      1 Template:Nmbox
+ 66.15%   85.121    149 Template:Languages/Lang
+ 28.98%   37.296    156 Template:Translatable
+ 17.28%   22.243      1 Template:Ll
+ 16.68%   21.458    152 Template:Pagelang
+  8.46%   10.882      1 Template:Languages/Title
+  5.75%    7.396      1 Template:LangSwitch
+  3.86%    4.970      1 Template:Dir
+-->
+
+<!-- Saved in parser cache with key sqlzoo_wiki:pcache:idhash:901-0!canonical and timestamp 20260131193448 and revision id 40201. Rendering was triggered because: page-view
+ -->
+</div></div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://sqlzoo.net/w/index.php?title=SELECT_names&amp;oldid=40201">https://sqlzoo.net/w/index.php?title=SELECT_names&amp;oldid=40201</a>"</div>
+<div class="visualClear"></div></div></div></div></div><div id="content-bottom-stuff"><div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://sqlzoo.net/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="https://sqlzoo.net/w/index.php?title=Category:Pages_using_deprecated_source_tags&amp;action=edit&amp;redlink=1" class="new" title="Category:Pages using deprecated source tags (page does not exist)">Pages using deprecated source tags</a></li><li><a href="https://sqlzoo.net/w/index.php?title=Category:Languages_pages&amp;action=edit&amp;redlink=1" class="new" title="Category:Languages pages (page does not exist)">Languages pages</a></li><li><a href="https://sqlzoo.net/w/index.php?title=Category:Pages_with_too_many_expensive_parser_function_calls&amp;action=edit&amp;redlink=1" class="new" title="Category:Pages with too many expensive parser function calls (page does not exist)">Pages with too many expensive parser function calls</a></li></ul></div></div></div></div><div id="mw-site-navigation"><div id="p-logo" class="mw-portlet" role="banner"><a class="mw-wiki-logo timeless-logo" href="https://sqlzoo.net/wiki/SQL_Tutorial" title="Visit the main page"><img src="./Select-sql_files/malones.svg"></a></div><div id="site-navigation" class="sidebar-chunk"><h2><span>Navigation</span></h2><div class="sidebar-inner"><div role="navigation" class="mw-portlet" id="p-" aria-labelledby="p--label"><h3 id="p--label" lang="en-GB" dir="ltr"></h3><div class="mw-portlet-body"><ul lang="en-GB" dir="ltr"><li id="n-SELECT-basics" class="mw-list-item"><a href="https://sqlzoo.net/wiki/SELECT_basics"><span>SELECT basics</span></a><progress max="1" value="0"></progress></li><li id="n-quiz" class="mw-list-item"><a href="https://sqlzoo.net/wiki/SELECT_Quiz"><span>quiz</span></a><progress max="1" value="0"></progress></li><li id="n-SELECT-from-world" class="mw-list-item" title="you have completed 0 of 13"><a href="https://sqlzoo.net/wiki/SELECT_from_WORLD_Tutorial"><span>SELECT from world</span></a><progress max="13" value="0"></progress></li><li id="n-quiz" class="mw-list-item"><a href="https://sqlzoo.net/wiki/BBC_QUIZ"><span>quiz</span></a><progress max="1" value="0"></progress></li><li id="n-SELECT-from-nobel" class="mw-list-item" title="you have completed 6 of 14"><a href="https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial"><span>SELECT from nobel</span></a><progress max="14" value="6"></progress></li><li id="n-quiz" class="mw-list-item"><a href="https://sqlzoo.net/wiki/Nobel_Quiz"><span>quiz</span></a><progress max="1" value="0"></progress></li><li id="n-SELECT-in-SELECT" class="mw-list-item" title="you have completed 2 of 10"><a href="https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial"><span>SELECT in SELECT</span></a><progress max="10" value="2"></progress></li><li id="n-quiz" class="mw-list-item"><a href="https://sqlzoo.net/wiki/Nested_SELECT_Quiz"><span>quiz</span></a><progress max="1" value="0"></progress></li><li id="n-SUM-and-COUNT" class="mw-list-item" title="you have completed 8 of 8"><a href="https://sqlzoo.net/wiki/SUM_and_COUNT"><span>SUM and COUNT</span></a><progress max="8" value="8"></progress></li><li id="n-quiz" class="mw-list-item"><a href="https://sqlzoo.net/wiki/SUM_and_COUNT_Quiz"><span>quiz</span></a><progress max="1" value="0"></progress></li><li id="n-JOIN" class="mw-list-item" title="you have completed 4 of 13"><a href="https://sqlzoo.net/wiki/The_JOIN_operation"><span>JOIN</span></a><progress max="13" value="4"></progress></li><li id="n-quiz" class="mw-list-item"><a href="https://sqlzoo.net/wiki/JOIN_Quiz"><span>quiz</span></a><progress max="1" value="0"></progress></li><li id="n-More-JOIN" class="mw-list-item"><a href="https://sqlzoo.net/wiki/More_JOIN_operations"><span>More JOIN</span></a><progress max="1" value="0"></progress></li><li id="n-quiz" class="mw-list-item"><a href="https://sqlzoo.net/wiki/JOIN_Quiz_2"><span>quiz</span></a><progress max="1" value="0"></progress></li><li id="n-Using-NULL" class="mw-list-item"><a href="https://sqlzoo.net/wiki/Using_Null"><span>Using NULL</span></a><progress max="1" value="0"></progress></li><li id="n-quiz" class="mw-list-item"><a href="https://sqlzoo.net/wiki/Using_Null_Quiz"><span>quiz</span></a><progress max="1" value="0"></progress></li><li id="n-Self-JOIN" class="mw-list-item"><a href="https://sqlzoo.net/wiki/Self_join"><span>Self JOIN</span></a><progress max="1" value="0"></progress></li><li id="n-quiz" class="mw-list-item"><a href="https://sqlzoo.net/wiki/Self_join_Quiz"><span>quiz</span></a><progress max="1" value="0"></progress></li></ul></div></div><div role="navigation" class="mw-portlet" id="p-Reference" aria-labelledby="p-Reference-label"><h3 id="p-Reference-label" lang="en-GB" dir="ltr">Reference</h3><div class="mw-portlet-body"><ul lang="en-GB" dir="ltr"><li id="n-NoSQL-zoo" class="mw-list-item"><a href="https://nosqlzoo.net/" rel="nofollow"><span>NoSQL zoo</span></a></li><li id="n-SELECT" class="mw-list-item"><a href="https://sqlzoo.net/wiki/SELECT"><span>SELECT</span></a></li><li id="n-Functions" class="mw-list-item"><a href="https://sqlzoo.net/wiki/FUNCTIONS"><span>Functions</span></a></li><li id="n-SELECT-..-WHERE" class="mw-list-item"><a href="https://sqlzoo.net/wiki/SELECT_.._WHERE"><span>SELECT .. WHERE</span></a></li><li id="n-SELECT-..-GROUP-BY" class="mw-list-item"><a href="https://sqlzoo.net/wiki/SELECT_.._GROUP_BY"><span>SELECT .. GROUP BY</span></a></li><li id="n-SELECT-..-JOIN" class="mw-list-item"><a href="https://sqlzoo.net/wiki/SELECT_.._JOIN"><span>SELECT .. JOIN</span></a></li><li id="n-SELECT-..-SELECT" class="mw-list-item"><a href="https://sqlzoo.net/wiki/SELECT_.._SELECT"><span>SELECT .. SELECT</span></a></li><li id="n-INSERT-..-VALUES" class="mw-list-item"><a href="https://sqlzoo.net/wiki/INSERT_.._VALUES"><span>INSERT .. VALUES</span></a></li><li id="n-INSERT-..-SELECT" class="mw-list-item"><a href="https://sqlzoo.net/wiki/INSERT_.._SELECT"><span>INSERT .. SELECT</span></a></li><li id="n-UPDATE" class="mw-list-item"><a href="https://sqlzoo.net/wiki/UPDATE"><span>UPDATE</span></a></li><li id="n-DELETE" class="mw-list-item"><a href="https://sqlzoo.net/wiki/DELETE"><span>DELETE</span></a></li><li id="n-CREATE-TABLE" class="mw-list-item"><a href="https://sqlzoo.net/wiki/CREATE_TABLE"><span>CREATE TABLE</span></a></li><li id="n-CREATE-VIEW" class="mw-list-item"><a href="https://sqlzoo.net/wiki/CREATE_VIEW"><span>CREATE VIEW</span></a></li><li id="n-CREATE-INDEX" class="mw-list-item"><a href="https://sqlzoo.net/wiki/CREATE_INDEX"><span>CREATE INDEX</span></a></li><li id="n-DROP" class="mw-list-item"><a href="https://sqlzoo.net/wiki/DROP"><span>DROP</span></a></li><li id="n-ALTER" class="mw-list-item"><a href="https://sqlzoo.net/wiki/ALTER"><span>ALTER</span></a></li><li id="n-UNION" class="mw-list-item"><a href="https://sqlzoo.net/wiki/UNION"><span>UNION</span></a></li><li id="n-LEFT-JOIN" class="mw-list-item"><a href="https://sqlzoo.net/wiki/LEFT_JOIN"><span>LEFT JOIN</span></a></li><li id="n-NULL" class="mw-list-item"><a href="https://sqlzoo.net/wiki/NULL"><span>NULL</span></a></li></ul></div></div></div></div><div id="site-tools" class="sidebar-chunk"><h2><span>Wiki tools</span></h2><div class="sidebar-inner"><div role="navigation" class="mw-portlet" id="p-tb" aria-labelledby="p-tb-label"><h3 id="p-tb-label" lang="en-GB" dir="ltr">Wiki tools</h3><div class="mw-portlet-body"><ul lang="en-GB" dir="ltr"><li id="t-specialpages" class="mw-list-item"><a href="https://sqlzoo.net/wiki/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q"><span>Special pages</span></a></li></ul></div></div></div></div></div><div id="mw-related-navigation"><div id="page-tools" class="sidebar-chunk"><h2><span>Page tools</span></h2><div class="sidebar-inner"><div role="navigation" class="mw-portlet emptyPortlet" id="p-cactions" title="More options" aria-labelledby="p-cactions-label"><h3 id="p-cactions-label" lang="en-GB" dir="ltr">Page tools</h3><div class="mw-portlet-body"><ul lang="en-GB" dir="ltr"></ul></div></div><div role="navigation" class="mw-portlet emptyPortlet" id="p-userpagetools" aria-labelledby="p-userpagetools-label"><h3 id="p-userpagetools-label" lang="en-GB" dir="ltr">User page tools</h3><div class="mw-portlet-body"><ul lang="en-GB" dir="ltr"></ul></div></div><div role="navigation" class="mw-portlet" id="p-pagemisc" aria-labelledby="p-pagemisc-label"><h3 id="p-pagemisc-label" lang="en-GB" dir="ltr">More</h3><div class="mw-portlet-body"><ul lang="en-GB" dir="ltr"><li id="t-whatlinkshere" class="mw-list-item"><a href="https://sqlzoo.net/wiki/Special:WhatLinksHere/SELECT_names" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://sqlzoo.net/wiki/Special:RecentChangesLinked/SELECT_names" rel="nofollow" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [alt-shift-p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://sqlzoo.net/w/index.php?title=SELECT_names&amp;oldid=40201" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://sqlzoo.net/w/index.php?title=SELECT_names&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-pagelog" class="mw-list-item"><a href="https://sqlzoo.net/w/index.php?title=Special:Log&amp;page=SELECT+names"><span>Page logs</span></a></li></ul></div></div></div></div><div id="catlinks-sidebar" class="sidebar-chunk"><h2><span>Categories</span></h2><div class="sidebar-inner"><div id="sidebar-normal-catlinks" class="mw-normal-catlinks"><div role="navigation" class="mw-portlet" id="p-normal-catlinks" aria-labelledby="p-normal-catlinks-label"><h3 id="p-normal-catlinks-label" lang="en-GB" dir="ltr">Categories</h3><div class="mw-portlet-body"><ul><li><a href="https://sqlzoo.net/w/index.php?title=Category:Pages_using_deprecated_source_tags&amp;action=edit&amp;redlink=1" class="new" title="Category:Pages using deprecated source tags (page does not exist)">Pages using deprecated source tags</a></li><li><a href="https://sqlzoo.net/w/index.php?title=Category:Languages_pages&amp;action=edit&amp;redlink=1" class="new" title="Category:Languages pages (page does not exist)">Languages pages</a></li><li><a href="https://sqlzoo.net/w/index.php?title=Category:Pages_with_too_many_expensive_parser_function_calls&amp;action=edit&amp;redlink=1" class="new" title="Category:Pages with too many expensive parser function calls (page does not exist)">Pages with too many expensive parser function calls</a></li></ul></div></div></div></div></div></div><div class="visualClear"></div></div></div><div id="mw-footer-container" class="mw-footer-container ts-container"><div id="mw-footer" class="mw-footer ts-inner" role="contentinfo" lang="en-GB" dir="ltr"><ul id="footer-icons"><li id="footer-poweredbyico" class="footer-icons"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><img src="./Select-sql_files/poweredby_mediawiki.svg" alt="Powered by MediaWiki" width="88" height="31" loading="lazy"></a></li></ul><div id="footer-list"><ul id="footer-info"><li id="footer-info-lastmod"> This page was last modified on 11 August 2023, at 08:13.</li></ul><ul id="footer-places"><li id="footer-places-privacy"><a href="https://sqlzoo.net/wiki/SQLZoo:Privacy_policy">Privacy policy</a></li><li id="footer-places-about"><a href="https://sqlzoo.net/wiki/SQLZoo:About">About SQLZoo</a></li><li id="footer-places-disclaimers"><a href="https://sqlzoo.net/wiki/SQLZoo:General_disclaimer">Disclaimers</a></li><li id="yourHost">Served by: <span id="hostname">basil</span> at <span id="dob">2026-02-01T14:20<span></span></span></li></ul></div><div class="visualClear"></div></div></div></div><script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":392,"wgPageParseReport":{"limitreport":{"cputime":"0.161","walltime":"4.476","ppvisitednodes":{"value":5394,"limit":1000000},"postexpandincludesize":{"value":15347,"limit":2097152},"templateargumentsize":{"value":4663,"limit":2097152},"expansiondepth":{"value":18,"limit":100},"expensivefunctioncount":{"value":105,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":14780,"limit":5000000},"timingprofile":["100.00%  128.684      1 Template:Languages","100.00%  128.684      1 -total"," 73.67%   94.803      1 Template:Nmbox"," 66.15%   85.121    149 Template:Languages/Lang"," 28.98%   37.296    156 Template:Translatable"," 17.28%   22.243      1 Template:Ll"," 16.68%   21.458    152 Template:Pagelang","  8.46%   10.882      1 Template:Languages/Title","  5.75%    7.396      1 Template:LangSwitch","  3.86%    4.970      1 Template:Dir"]},"cachereport":{"timestamp":"20260131193448","ttl":86400,"transientcontent":false}}});});</script>
+
+<div id="mw-teleport-target"></div></body></html>
